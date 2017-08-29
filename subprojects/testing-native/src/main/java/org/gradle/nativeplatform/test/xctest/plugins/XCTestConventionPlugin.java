@@ -104,7 +104,7 @@ public class XCTestConventionPlugin implements Plugin<ProjectInternal> {
 
         // Add a link task
         LinkBundle link = (LinkBundle) tasks.getByName("linkTest");
-        link.setLinkerArgs(Lists.newArrayList("-Xlinker", "-bundle", "-F" + frameworkDir.getAbsolutePath(), "-framework", "XCTest", "-Xlinker", "-rpath", "-Xlinker", "@executable_path/../Frameworks", "-Xlinker", "-rpath", "-Xlinker", "@loader_path/../Frameworks"));
+        link.setLinkerArgs(Lists.newArrayList("-F" + frameworkDir.getAbsolutePath(), "-framework", "XCTest", "-Xlinker", "-rpath", "-Xlinker", "@executable_path/../Frameworks", "-Xlinker", "-rpath", "-Xlinker", "@loader_path/../Frameworks"));
 
         configureTestedComponent(project);
 
