@@ -53,7 +53,7 @@ class XCTestConventionPluginTest extends Specification {
 
         then:
         project.components.test == project.xctest
-        project.components.testExe == project.xctest.executable
+        project.components.testBundle == project.xctest.bundle
     }
 
     def "adds compile, link and install tasks"() {
